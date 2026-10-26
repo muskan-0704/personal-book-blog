@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #fff5f5; 
+    color: #5a2a38;          
+}
+
+/* nav */
+.navcontainer{
+    width: 100%;
+    background-color: #ffe3e8;
+    min-height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    padding-right: 1rem;
+}
+
+.navlist{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 2.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: #d47a88;
+}
+
+.navitems{
+    display: flex;
+    gap:30px;
+}
+
+
+
+/* footer */
+
+footer{
+    width:100%;
+    min-height: 40px;
+
+    background-color: #ffe3e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    color: #5a2a38;
+    font-size: 1.5rem;
+}
+
+/* main */
+
+.contentbox{
+    width: 70%;
+    margin: auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid #f2c4ce;
+    box-shadow: 0px 8px 20px rgba(212, 122, 136, 0.25);
+}
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:2rem;
+}
+hr{
+    height: 2px;
+    background-color: #f2c4ce;
+    border: 2px solid #f2c4ce;
+}
+
+/* rightbox */
+.rightbox{
+    position: relative;
+    transition: all 0.8s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightbox:hover{
+    transform: scale(1.2);
+}
+img{
+    border-radius: 20px;
+    width:218px;
+    height:312px;
+}
+
+/* leftbox */
+
+.leftbox{
+    font-size: 1.5rem;
+}
+
+.leftbox h2 {
+    color: #5a2a38; 
+}
+
+.leftbox h3 {
+    color: #d47a88; 
+}
+
+.author {
+    color: #e8998d;
+}
+
+.rightbox .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #d47a88;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s linear 0s;
+}
+
+.rightbox .overlaytext{
+  font-size: 1.2rem;
+  color: rgb(255, 254, 254);
+  position: absolute;
+  top: auto;
+  left: auto;
+  opacity: 0;
+}
+.rightbox:hover .overlaytext{
+  opacity: 1;
+}
+.rightbox:hover .overlay{
+  opacity: 0.4;
+}
+
+
+/* medis quaries */
+
+@media (max-width: 900px) {
+  .contentbox {
+    width: 85%;              /* Gives more room to content */
+    padding: 2rem;
+  }
+
+  .navlist {
+    font-size: 1.8rem;       /* Reduces oversized nav text */
+  }
+}
+
+@media (max-width: 650px) {
+  /* Navbar adjustments */
+  .navlist {
+    flex-direction: column;  /* Stacks logo on top of menu links */
+    gap: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .navitems {
+    gap: 18px;
+  }
+
+  /* Main card wrapper */
+  .contentbox {
+    width: 95%;              /* Uses almost full screen width on phones */
+    padding: 1.5rem 1rem;
+    gap: 35px;
+  }
+
+  /* Stack book info and book image vertically */
+  .item {
+    flex-direction: column-reverse; /* Puts book cover above or below text */
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  /* Align lists nicely when centered */
+  .leftbox {
+    font-size: 1.1rem;
+  }
+
+  .leftbox h2 {
+    font-size: 1.5rem;
+  }
+
+  .chrlist {
+    list-style-position: inside; /* Keeps bullet points aligned with text */
+    padding-left: 0;
+  }
+
+  .ratelist {
+    list-style-position: inside;
+    padding-left: 0;
+  }
+
+  /* Keep cover size reasonable on small screens */
+  img {
+    width: 180px;
+    height: 260px;
+  }
+
+  /* Scale hover down slightly on touch devices so it doesn't overflow screen */
+  .rightbox:hover {
+    transform: scale(1.05);
+  }
+
+  .footer {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+}
+
+
+
+/* .chr1{
+    width:100px;
+    height: 25px;
+    background-color: #f38c9c;
+    border: 2px solid #5a2a38;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
